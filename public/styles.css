@@ -138,3 +138,12 @@ td input.edited { border-color: var(--accent); }
 
 .empty { color: var(--muted); text-align: center; padding: 32px; }
 td.num { white-space: nowrap; }
+
+.doc-card th:nth-child(1) { width: 170px; }
+.doc-card th:nth-child(2) { width: 30%; }
+.doc-card th:nth-child(4) { width: 64px; }
+
+@media (max-width: 600px) {
+  header.site { height: auto; flex-wrap: wrap; gap: 4px 16px; padding: 10px 16px; }
+  main { padding: 16px; }
+}

@@ -104,6 +104,15 @@ test('reports truncated output', async () => {
   await assert.rejects(createExtractor({ client }).extract(pdf), /MAX_TOKENS/);
 });
 
+test('unwraps the message from Gemini JSON error bodies', async () => {
+  const body = JSON.stringify({ error: { code: 400, message: 'API key not valid. Please pass a valid API key.' } });
+  const err = Object.assign(new Error(body), { status: 400 });
+  await assert.rejects(
+    createExtractor({ client: fakeClient(err) }).extract(pdf),
+    { message: 'Gemini rejected the request (400): API key not valid. Please pass a valid API key.' },
+  );
+});
+
 test('maps quota errors to a readable message', async () => {
   const err = Object.assign(new Error('Resource exhausted'), { status: 429 });
   await assert.rejects(createExtractor({ client: fakeClient(err) }).extract(pdf), /quota reached/);

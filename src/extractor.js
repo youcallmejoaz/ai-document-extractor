@@ -46,6 +46,15 @@ export function normalizeExtraction(raw) {
   };
 }
 
+// The SDK puts the raw JSON error body in err.message; pull out the human-readable part.
+function apiErrorMessage(err) {
+  try {
+    return JSON.parse(err.message).error.message ?? err.message;
+  } catch {
+    return err.message;
+  }
+}
+
 export function createExtractor({ client, model = DEFAULT_MODEL }) {
   return {
     model,
@@ -75,7 +84,7 @@ export function createExtractor({ client, model = DEFAULT_MODEL }) {
           throw new ExtractionError('Gemini quota reached (free-tier rate limit). Wait a minute and try again.');
         }
         if (err?.status === 400 || err?.status === 403 || err?.status === 404) {
-          throw new ExtractionError(`Gemini rejected the request (${err.status}): ${err.message}`);
+          throw new ExtractionError(`Gemini rejected the request (${err.status}): ${apiErrorMessage(err)}`);
         }
         throw new ExtractionError(`Gemini request failed: ${err?.message ?? err}`);
       }
