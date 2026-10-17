@@ -1,0 +1,27 @@
+{
+  "name": "document-extractor",
+  "version": "1.0.0",
+  "description": "Extract key fields from PDF insurance quotes with Gemini, review them, and approve records into SQLite.",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env --disable-warning=ExperimentalWarning src/server.js",
+    "dev:mock": "node --disable-warning=ExperimentalWarning scripts/dev-mock.js",
+    "samples": "node scripts/make-samples.js",
+    "test": "node --disable-warning=ExperimentalWarning --test \"test/*.test.js\"",
+    "test:live": "node --disable-warning=ExperimentalWarning --test test/live.test.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^2.30.0",
+    "express": "^5.3.0",
+    "multer": "^2.4.0"
+  },
+  "devDependencies": {
+    "pdfkit": "^0.20.2",
+    "supertest": "^7.3.1"
+  }
+}
