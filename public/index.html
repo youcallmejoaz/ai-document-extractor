@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document Extractor</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site">
+      <h1>Document Extractor</h1>
+      <nav>
+        <a href="/" aria-current="page">Upload &amp; review</a>
+        <a href="/dashboard.html">Approved records</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Upload insurance quotes</h2>
+        <p class="hint">Upload one or more PDF quotes. Each one is read by Gemini and shown below for review. Nothing is saved until you click Approve.</p>
+        <form id="upload-form" class="upload-row">
+          <label class="dropzone" id="dropzone">
+            <input type="file" id="file-input" name="files" accept="application/pdf,.pdf" multiple />
+            <span id="dropzone-text">Drop PDFs here or click to choose files</span>
+          </label>
+          <button type="submit" class="primary" id="extract-btn" disabled>Extract</button>
+        </form>
+        <div class="status" id="status" role="status"></div>
+        <div class="legend">
+          <span><span class="swatch amber"></span>Low confidence or missing: check carefully</span>
+          <span><span class="swatch red"></span>Duplicate quote reference: cannot be approved</span>
+        </div>
+      </section>
+
+      <div id="documents"></div>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
