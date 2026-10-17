@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>C9 prompt moments</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; }
+      html, body {
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background: #0b0d10;
+        color: #e6edf3;
+        font-family: 'DejaVu Sans Mono', 'Liberation Mono', monospace;
+      }
+      .window {
+        position: absolute;
+        inset: 40px 48px;
+        background: #12161b;
+        border: 1px solid #2a3038;
+        border-radius: 16px;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .window.on { opacity: 1; }
+      .bar {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 20px;
+        background: #181d23;
+        border-bottom: 1px solid #2a3038;
+        font-family: Inter, sans-serif;
+        font-size: 18px;
+        color: #8b949e;
+      }
+      .dot { width: 14px; height: 14px; border-radius: 50%; }
+      .bar .title { margin-left: 14px; }
+      .screen { padding: 34px 40px; transition: opacity 0.3s ease; }
+      .screen.out { opacity: 0; }
+      .label {
+        font-family: Inter, sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: #8b949e;
+        margin-bottom: 22px;
+      }
+      .prompt { display: flex; gap: 18px; font-size: 29px; line-height: 1.5; }
+      .prompt .chev { color: #3fb950; flex: none; }
+      .prompt .text { white-space: pre-wrap; word-break: break-word; }
+      .caret {
+        display: inline-block;
+        width: 0.6em;
+        height: 1.1em;
+        vertical-align: -0.18em;
+        background: #e6edf3;
+        animation: blink 1s steps(1) infinite;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+      .status { margin-top: 30px; font-size: 27px; line-height: 1.4; min-height: 1.4em; }
+      .working { color: #e3b341; }
+      .result { color: #3fb950; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <div class="window" id="window">
+      <div class="bar">
+        <span class="dot" style="background: #ff5f57"></span>
+        <span class="dot" style="background: #febc2e"></span>
+        <span class="dot" style="background: #28c840"></span>
+        <span class="title">Document Extractor · build prompts</span>
+      </div>
+      <div class="screen" id="screen">
+        <div class="label" id="label"></div>
+        <div class="prompt"><span class="chev">&gt;</span><span class="text"><span id="typed"></span><span class="caret" id="caret"></span></span></div>
+        <div class="status" id="status"></div>
+      </div>
+    </div>
+
+    <script>
+      // Verbatim excerpts from the build session's prompts. Edit here to change what is replayed.
+      const MOMENTS = [
+        {
+          label: '1 / 4 · Starter prompt (first 2 lines)',
+          prompt:
+            'Build a web app called Document Extractor with Node.js, Express, SQLite and a simple HTML front end.\n' +
+            'The user uploads one or more PDF insurance quotes. For each PDF, the server sends it to the Claude API as a document and asks for JSON only, matching this schema:',
+          result: '✓ Express + SQLite app with upload, review and dashboard pages',
+        },
+        {
+          label: '2 / 4 · Sources',
+          prompt: '{ fields: [{ name, value, source_quote, page, confidence: "high"|"low" }], missing: string[] }',
+          result: '✓ Every extracted value comes back with its source quote and page',
+        },
+        {
+          label: '3 / 4 · Review screen',
+          prompt:
+            'Show a review screen per document: each field with its value, source quote and page. ' +
+            'Mark low confidence and missing fields amber. Let the reviewer edit any field.',
+          result: '✓ Review screen: source per field, amber flags, every field editable',
+        },
+        {
+          label: '4 / 4 · Tests and deploy',
+          prompt: 'Write tests. Create a new GitHub repo called document-extractor and push the code.',
+          result: '✓ 36 tests passing · code pushed to GitHub',
+        },
+      ];
+
+      const INTRO = 0.6; // window fades in
+      const MOMENT = 9.8; // seconds per moment, kept under 10
+      const TYPE_START = 0.7;
+      const MAX_TYPING = 5.4;
+      const CHAR_TIME = 0.055;
+
+      const $ = (id) => document.getElementById(id);
+      let shown = -1;
+
+      function frame(now, t0) {
+        const t = (now - t0) / 1000;
+        $('window').classList.toggle('on', t > 0);
+        const i = Math.min(MOMENTS.length - 1, Math.max(0, Math.floor((t - INTRO) / MOMENT)));
+        const m = MOMENTS[i];
+        const local = t - INTRO - i * MOMENT;
+
+        if (i !== shown) {
+          shown = i;
+          $('label').textContent = m.label;
+        }
+        const typing = Math.min(MAX_TYPING, m.prompt.length * CHAR_TIME);
+        const chars = Math.max(0, Math.min(m.prompt.length, Math.floor(((local - TYPE_START) / typing) * m.prompt.length)));
+        $('typed').textContent = m.prompt.slice(0, chars);
+
+        const enter = TYPE_START + typing + 0.6;
+        $('caret').style.visibility = local < enter ? 'visible' : 'hidden';
+        const state = local < enter ? '' : local < enter + 0.9 ? 'working' : 'result';
+        const status = $('status');
+        if (status.dataset.state !== `${i}:${state}`) {
+          status.dataset.state = `${i}:${state}`;
+          const line = document.createElement('span');
+          line.className = state;
+          line.textContent = state === 'working' ? '● working…' : state === 'result' ? m.result : '';
+          status.replaceChildren(line);
+        }
+
+        const last = i === MOMENTS.length - 1;
+        $('screen').classList.toggle('out', !last && local > MOMENT - 0.35);
+        requestAnimationFrame((n) => frame(n, t0));
+      }
+
+      // The recorder adds .play to <body> to start the timeline.
+      let started = false;
+      new MutationObserver(() => {
+        if (!started && document.body.classList.contains('play')) {
+          started = true;
+          const t0 = performance.now();
+          requestAnimationFrame((n) => frame(n, t0));
+        }
+      }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    </script>
+  </body>
+</html>

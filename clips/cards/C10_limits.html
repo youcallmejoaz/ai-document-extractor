@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>C10 limits card</title>
+    <link rel="stylesheet" href="cards.css" />
+    <style>
+      .heads, .row {
+        display: grid;
+        grid-template-columns: 1fr 72px 1fr;
+        align-items: center;
+      }
+      .heads {
+        margin-top: 44px;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .heads span:last-child { grid-column: 3; }
+      .rows { margin-top: 14px; display: flex; flex-direction: column; gap: 22px; }
+      .cell {
+        height: 118px;
+        border-radius: 20px;
+        padding: 0 26px;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-size: 38px;
+        font-weight: 750;
+        line-height: 1.12;
+        letter-spacing: -0.01em;
+        border-left: 10px solid;
+      }
+      .cell.amber { background: var(--amber-bg); border-color: var(--amber-accent); }
+      .cell.red { background: var(--red-bg); border-color: var(--red); }
+      .cell.green { background: var(--green-bg); border-color: var(--green); }
+      .arrow { display: grid; place-items: center; color: var(--muted); }
+      .arrow svg { width: 46px; height: 46px; overflow: visible; }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <h1 class="fade" style="animation-delay: 0.1s">Limits, and the safeguard for each</h1>
+
+      <div class="heads fade" style="animation-delay: 0.6s"><span>Limit</span><span>Safeguard</span></div>
+
+      <div class="rows">
+        <div class="row">
+          <div class="cell amber appear" style="animation-delay: 1.5s">
+            <span class="icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+            Blurry scans
+          </div>
+          <div class="arrow draw" style="animation-delay: 3.3s"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22h30M28 13l9 9-9 9"/></svg></div>
+          <div class="cell green appear" style="animation-delay: 3.8s">
+            <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+            The person approves
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="cell amber appear" style="animation-delay: 8.5s">
+            <span class="icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+            Different layouts
+          </div>
+          <div class="arrow draw" style="animation-delay: 10.3s"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22h30M28 13l9 9-9 9"/></svg></div>
+          <div class="cell green appear" style="animation-delay: 10.8s">
+            <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+            Fields set per business
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="cell red appear" style="animation-delay: 15.5s">
+            <span class="icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 17h.01"/></svg></span>
+            Misread values
+          </div>
+          <div class="arrow draw" style="animation-delay: 17.3s"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22h30M28 13l9 9-9 9"/></svg></div>
+          <div class="cell green appear" style="animation-delay: 17.8s">
+            <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+            Every value shows its source
+          </div>
+        </div>
+      </div>
+
+      <div class="footer fade" style="animation-delay: 0.4s">Document Extractor</div>
+    </div>
+  </body>
+</html>

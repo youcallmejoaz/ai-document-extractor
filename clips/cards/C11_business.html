@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>C11 business card</title>
+    <link rel="stylesheet" href="cards.css" />
+    <style>
+      .list { margin-top: 40px; display: flex; flex-direction: column; gap: 14px; }
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        font-size: 44px;
+        font-weight: 750;
+        letter-spacing: -0.01em;
+        line-height: 1.1;
+      }
+      .item .icon { width: 70px; height: 70px; }
+      .item .icon svg { width: 40px; height: 40px; }
+      .note { font-size: 30px; font-weight: 600; color: var(--amber); }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <h1 class="fade" style="animation-delay: 0.1s">What it means for the business</h1>
+
+      <div class="list">
+        <div class="item appear" style="animation-delay: 2s">
+          <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+          Less typing
+        </div>
+        <div class="item appear" style="animation-delay: 7s">
+          <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+          Fewer mistakes
+        </div>
+        <div class="item appear" style="animation-delay: 12s">
+          <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+          Data you can trust
+        </div>
+        <div class="item appear" style="animation-delay: 17s">
+          <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+          Built in a week
+        </div>
+        <div class="item appear" style="animation-delay: 22s">
+          <span class="icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+          A few cents per document <span class="note">(estimate)</span>
+        </div>
+      </div>
+
+      <div class="footer fade" style="animation-delay: 0.4s">Document Extractor</div>
+    </div>
+  </body>
+</html>

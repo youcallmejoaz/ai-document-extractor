@@ -12,7 +12,9 @@
     "dev:mock": "node --disable-warning=ExperimentalWarning scripts/dev-mock.js",
     "samples": "node scripts/make-samples.js",
     "test": "node --disable-warning=ExperimentalWarning --test \"test/*.test.js\"",
-    "test:live": "node --disable-warning=ExperimentalWarning --test test/live.test.js"
+    "test:live": "node --disable-warning=ExperimentalWarning --test test/live.test.js",
+    "clips": "node --disable-warning=ExperimentalWarning clips/record.mjs",
+    "clips:verify": "node clips/verify.mjs"
   },
   "license": "MIT",
   "dependencies": {
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "pdfkit": "^0.20.2",
+    "playwright": "^1.56.1",
     "supertest": "^7.3.1"
   }
 }

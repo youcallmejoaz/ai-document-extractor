@@ -73,6 +73,20 @@ Coverage:
 - the review screen's amber/red/approve logic
 - the sample PDFs
 
+## Demo clips
+
+`clips/` holds 1080p MP4 clips for a client demo video, with a manifest in `clips/MANIFEST.md`. They show the app
+running on the sample quotes, three explainer cards and a replay of the build prompts.
+
+```bash
+npm run clips              # re-record every clip (needs ffmpeg; uses the mock extractor, no API key)
+npm run clips -- C06 C07   # re-record some scenes
+npm run clips:verify       # check every clip against the manifest
+```
+
+`clips/record.mjs` drives Chromium with Playwright and pauses like a person between steps. It captures at 3840×2160 and
+encodes H.264 with ffmpeg. Outside this repo's dev container, run `npx playwright install chromium` once first.
+
 ## How it works
 
 ```

@@ -1,0 +1,92 @@
+/* Shared look for the explainer cards. Pages are laid out on a fixed 1280x720 canvas and
+   recorded at 3x device pixels, so 40px text here is 60px in the 1080p video. */
+:root {
+  --bg: #ffffff;
+  --ink: #111827;
+  --muted: #4b5563;
+  --line: #e5e7eb;
+  --green: #1e8e3e;
+  --green-bg: #e6f4ea;
+  --amber: #b45309;
+  --amber-accent: #f59e0b;
+  --amber-bg: #fff4d6;
+  --red: #c5221f;
+  --red-bg: #fde8e8;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+html, body {
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, 'Liberation Sans', system-ui, sans-serif;
+}
+
+/* Nothing moves until the recorder adds .play, so every take starts on frame one. */
+body:not(.play) * { animation-play-state: paused !important; }
+
+.canvas {
+  width: 1280px;
+  height: 720px;
+  padding: 56px 64px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.footer {
+  margin-top: auto;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.appear { opacity: 0; animation: appear 0.7s var(--ease) forwards; }
+@keyframes appear {
+  from { opacity: 0; transform: translateY(18px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+.fade { opacity: 0; animation: fade 0.6s ease forwards; }
+@keyframes fade { to { opacity: 1; } }
+
+/* Arrows wipe in from the left. */
+.draw { opacity: 0; animation: draw 0.6s ease forwards; }
+@keyframes draw {
+  from { opacity: 1; clip-path: inset(0 100% 0 0); }
+  to { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+
+.icon {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.icon svg { width: 36px; height: 36px; }
+.icon.ink { background: #eef0f3; color: var(--ink); }
+.icon.green { background: var(--green-bg); color: var(--green); }
+.icon.amber { background: var(--amber-bg); color: var(--amber); }
+.icon.red { background: var(--red-bg); color: var(--red); }
