@@ -1,0 +1,23 @@
+If your team spends hours copying details out of PDF quotes into a spreadsheet, this is for you. Watch. Three quotes go in, and every important detail comes out in a clean record. And look, it has flagged one field it isn't sure about, so a person checks it first.
+
+I'm Joel. I build AI systems that take repetitive work off businesses, and I build them in a week.
+
+So here's the thing. The whole system is five simple steps. A PDF goes in. The AI reads it and fills in the fields. It shows you where it found each one. A person checks anything doubtful and approves. Then the record is saved and shows up in your dashboard. Let me show you each step.
+
+First, you drop in your quotes. One or twenty, it doesn't matter. Then click Extract.
+
+The AI reads each quote and fills in the details your team would normally type: the client, the insurer, the policy type, the premium, the start date and the cover limit. That's the slow part of the job, done in seconds.
+
+Now this is where it gets interesting. Every value has a receipt. Click the premium, and it shows you the exact line in the PDF, and the page it's on. So you never have to wonder where a number came from. If the AI can't point to it, you shouldn't trust it, and this makes checking take seconds.
+
+Here's the review screen. Most fields are fine. This one is amber, because the cover limit wasn't clear in the document. I fix it right here and click Approve. Nothing is saved until a person says yes. The AI does the heavy lifting, and your team stays in control.
+
+If someone uploads the same quote twice, it's flagged red, so you don't end up with duplicate records. And every approved quote lands here, in one clean dashboard your team can work from.
+
+A quick look at how I work. I built this with Claude Code. I don't jump straight into code. I start by describing the business process and planning it. Then I build it step by step, and test it on sample documents before anything goes live. That's how I can deliver something reliable in a week, not months.
+
+Now let me be honest with you. It's not as easy as it sounds to make this perfect. Blurry scans are harder to read. Every business has its own layouts. And AI can misread a value. That's exactly why it shows its sources, flags anything doubtful, and never saves without a person's approval.
+
+For your business, this means less time typing, fewer mistakes, and data you can trust. A version for you would use your own documents and fields, with logins, a record of every change, and a connection to your CRM or Google Sheets. Running it costs a few cents per document, plus hosting from free to about seven dollars a month. That's an estimate, but it gives you an idea.
+
+If your team is still copying data out of documents by hand, I'd love to build your version. And that's it. So that will be it for now.

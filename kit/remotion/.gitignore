@@ -1,0 +1,5 @@
+node_modules
+public/seg
+src/project.json
+src/captions.json
+out

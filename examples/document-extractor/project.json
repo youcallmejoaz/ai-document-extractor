@@ -1,0 +1,968 @@
+{
+ "title": "AI Document Extractor",
+ "fps": 30,
+ "voice": "voice.m4a",
+ "script": "script.txt",
+ "clips_dir": "clips",
+ "segments": [
+  {
+   "id": "M01_intro",
+   "type": "motion",
+   "start": 0.0,
+   "end": 8.4,
+   "seed": 3,
+   "els": [
+    {
+     "t": 2.4,
+     "html": "<div class=\"h1\" style=\"font-size:260px;color:#D97757\">Hours</div>",
+     "anim": "pop",
+     "d": 0.6,
+     "style": "left:560px;top:330px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 3.2,
+     "html": "<div class=\"h1\" style=\"font-size:96px\">copying PDF quotes</div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:600px;top:560px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 5.0,
+     "html": "<div class=\"h1\" style=\"font-size:96px\">into a <span class=\"mark\"><i></i>spreadsheet?</span></div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:640px;top:690px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "mt": 5.6
+    },
+    {
+     "t": 3.9,
+     "html": "<div style=\"width:120px;height:150px;background:#fff;border-radius:14px;box-shadow:0 10px 26px rgba(0,0,0,.14);padding:16px\"><div style=\"background:#D97757;color:#fff;font:800 22px Inter;border-radius:6px;padding:3px 8px;display:inline-block\">PDF</div><div style=\"height:9px;background:#e6e1d8;border-radius:5px;margin:14px 0 8px\"></div><div style=\"height:9px;background:#e6e1d8;border-radius:5px;width:70%;margin-bottom:8px\"></div><div style=\"height:9px;background:#e6e1d8;border-radius:5px\"></div></div>",
+     "anim": "drop",
+     "d": 0.5,
+     "style": "left:1260px;top:300px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "float": 10
+    },
+    {
+     "t": 4.3,
+     "html": "<div style=\"width:120px;height:150px;background:#fff;border-radius:14px;box-shadow:0 10px 26px rgba(0,0,0,.14);padding:16px\"><div style=\"background:#D97757;color:#fff;font:800 22px Inter;border-radius:6px;padding:3px 8px;display:inline-block\">PDF</div><div style=\"height:9px;background:#e6e1d8;border-radius:5px;margin:14px 0 8px\"></div><div style=\"height:9px;background:#e6e1d8;border-radius:5px;width:70%;margin-bottom:8px\"></div><div style=\"height:9px;background:#e6e1d8;border-radius:5px\"></div></div>",
+     "anim": "drop",
+     "d": 0.5,
+     "style": "left:1420px;top:380px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "float": 12,
+     "ph": 1
+    },
+    {
+     "t": 4.7,
+     "html": "<div style=\"width:120px;height:150px;background:#fff;border-radius:14px;box-shadow:0 10px 26px rgba(0,0,0,.14);padding:16px\"><div style=\"background:#D97757;color:#fff;font:800 22px Inter;border-radius:6px;padding:3px 8px;display:inline-block\">PDF</div><div style=\"height:9px;background:#e6e1d8;border-radius:5px;margin:14px 0 8px\"></div><div style=\"height:9px;background:#e6e1d8;border-radius:5px;width:70%;margin-bottom:8px\"></div><div style=\"height:9px;background:#e6e1d8;border-radius:5px\"></div></div>",
+     "anim": "drop",
+     "d": 0.5,
+     "style": "left:1580px;top:300px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "float": 9,
+     "ph": 2
+    },
+    {
+     "t": 5.6,
+     "html": "<div class=\"card\" style=\"padding:26px\"><div style=\"display:flex;gap:8px;margin-bottom:8px\"><div style=\"width:96px;height:30px;border-radius:6px;background:#D97757\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#D97757\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#D97757\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#D97757\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#D97757\"></div></div><div style=\"display:flex;gap:8px;margin-bottom:8px\"><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div></div><div style=\"display:flex;gap:8px;margin-bottom:8px\"><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div></div><div style=\"display:flex;gap:8px;margin-bottom:8px\"><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div></div><div style=\"display:flex;gap:8px;margin-bottom:8px\"><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div></div><div style=\"display:flex;gap:8px;margin-bottom:8px\"><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div><div style=\"width:96px;height:30px;border-radius:6px;background:#efe9df\"></div></div></div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:1450px;top:720px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 7.0,
+     "html": "<div class=\"pill\" style=\"font-size:44px\">This is for you.</div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:600px;top:900px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    }
+   ]
+  },
+  {
+   "id": "U01",
+   "type": "ui",
+   "start": 8.4,
+   "end": 18.8,
+   "clip": "C01_hook",
+   "clip_in": 0,
+   "clip_out": 10.4,
+   "chips": [
+    [
+     "3 quotes in. Clean records out.",
+     8.9
+    ]
+   ]
+  },
+  {
+   "id": "M02_name",
+   "type": "motion",
+   "start": 18.8,
+   "end": 24.6,
+   "seed": 11,
+   "els": [
+    {
+     "t": 19.1,
+     "html": "<div style=\"width:220px;height:220px;border-radius:50%;background:#D97757;color:#fff;display:flex;align-items:center;justify-content:center\" class=\"h1\"><span style=\"font-size:110px\">JO</span></div>",
+     "anim": "pop",
+     "d": 0.6,
+     "style": "left:960px;top:300px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 19.3,
+     "html": "<div class=\"h1\" style=\"font-size:120px;white-space:nowrap\">I&#39;m <em>Joel.</em></div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:500px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 19.9,
+     "html": "<div class=\"h1\" style=\"font-size:56px;white-space:nowrap;color:#1A1915\">%T%</div>",
+     "anim": "type",
+     "d": 2.6,
+     "style": "left:960px;top:640px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "text": "I build AI systems that take repetitive work off businesses"
+    },
+    {
+     "t": 22.9,
+     "html": "<div class=\"pill\" style=\"font-size:52px\">...in a week.</div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:960px;top:790px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    }
+   ]
+  },
+  {
+   "id": "M03_steps",
+   "type": "motion",
+   "start": 24.6,
+   "end": 43.8,
+   "seed": 5,
+   "els": [
+    {
+     "t": 25.3,
+     "html": "<div class=\"lab\">SO HERE&#39;S THE THING</div>",
+     "anim": "fade",
+     "d": 0.5,
+     "style": "left:960px;top:120px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 25.6,
+     "html": "<div class=\"h1\" style=\"font-size:110px;white-space:nowrap\"><em>5</em> simple steps</div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:240px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 28.2,
+     "html": "<div class=\"card\" style=\"width:270px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px\"><div style=\"font:800 26px Inter;color:#D97757\">1</div><svg width=\"90\" height=\"90\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1A1915\" stroke-width=\"1.6\"><path d=\"M6 2h8l5 5v15H6z\"/><path d=\"M14 2v5h5\"/><path d=\"M9 13h7M9 17h5\"/></svg><div class=\"h1\" style=\"font-size:38px;text-align:center;line-height:1.05\">PDF in</div></div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:280px;top:600px;",
+     "cls": "step",
+     "base": "translate(-50%,-50%)",
+     "hl": [
+      28.2,
+      29.3
+     ]
+    },
+    {
+     "t": 29.3,
+     "html": "<div class=\"card\" style=\"width:270px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px\"><div style=\"font:800 26px Inter;color:#D97757\">2</div><svg width=\"90\" height=\"90\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1A1915\" stroke-width=\"1.6\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"M20 20l-4-4\"/><path d=\"M8 11h6M11 8v6\"/></svg><div class=\"h1\" style=\"font-size:38px;text-align:center;line-height:1.05\">AI reads it</div></div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:620px;top:600px;",
+     "cls": "step",
+     "base": "translate(-50%,-50%)",
+     "hl": [
+      29.3,
+      32.4
+     ]
+    },
+    {
+     "t": 32.4,
+     "html": "<div class=\"card\" style=\"width:270px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px\"><div style=\"font:800 26px Inter;color:#D97757\">3</div><svg width=\"90\" height=\"90\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#D97757\" stroke-width=\"1.8\"><path d=\"M4 5h16v11H9l-5 4z\"/><path d=\"M8 9h8M8 12h5\"/></svg><div class=\"h1\" style=\"font-size:38px;text-align:center;line-height:1.05\">Shows the source</div></div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:960px;top:600px;",
+     "cls": "step",
+     "base": "translate(-50%,-50%)",
+     "hl": [
+      32.4,
+      34.5
+     ]
+    },
+    {
+     "t": 34.5,
+     "html": "<div class=\"card\" style=\"width:270px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px\"><div style=\"font:800 26px Inter;color:#D97757\">4</div><svg width=\"90\" height=\"90\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1A1915\" stroke-width=\"1.6\"><circle cx=\"9\" cy=\"8\" r=\"4\"/><path d=\"M2 21c0-4 3-6 7-6s7 2 7 6\"/><path d=\"M15 11l2 2 4-4\"/></svg><div class=\"h1\" style=\"font-size:38px;text-align:center;line-height:1.05\">Person approves</div></div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:1300px;top:600px;",
+     "cls": "step",
+     "base": "translate(-50%,-50%)",
+     "hl": [
+      34.5,
+      38.3
+     ]
+    },
+    {
+     "t": 38.3,
+     "html": "<div class=\"card\" style=\"width:270px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px\"><div style=\"font:800 26px Inter;color:#D97757\">5</div><svg width=\"90\" height=\"90\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1A1915\" stroke-width=\"1.6\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18M9 9v12\"/></svg><div class=\"h1\" style=\"font-size:38px;text-align:center;line-height:1.05\">Saved to dashboard</div></div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:1640px;top:600px;",
+     "cls": "step",
+     "base": "translate(-50%,-50%)",
+     "hl": [
+      38.3,
+      41.7
+     ]
+    },
+    {
+     "t": 41.8,
+     "html": "<div class=\"pill\" style=\"font-size:44px\">Let me show you</div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:960px;top:920px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "float": 6
+    }
+   ]
+  },
+  {
+   "id": "U02",
+   "type": "ui",
+   "start": 43.8,
+   "end": 54.1,
+   "clip": "C04_upload",
+   "clip_in": 0.3,
+   "clip_out": 10.6,
+   "chips": [
+    [
+     "Drop in your quotes",
+     44.3
+    ],
+    [
+     "Click Extract",
+     51.2
+    ]
+   ]
+  },
+  {
+   "id": "U03a",
+   "type": "ui",
+   "start": 54.1,
+   "end": 60.1,
+   "clip": "C05_record_fills",
+   "clip_in": 0,
+   "clip_out": 6,
+   "chips": [
+    [
+     "The AI reads each quote",
+     54.5
+    ]
+   ]
+  },
+  {
+   "id": "U03b",
+   "type": "ui",
+   "start": 60.1,
+   "end": 67.0,
+   "clip": "C05_record_fills",
+   "clip_in": 6,
+   "clip_out": 24.5,
+   "chips": [
+    [
+     "AI fills every field",
+     60.2
+    ]
+   ]
+  },
+  {
+   "id": "M05_receipt",
+   "type": "motion",
+   "start": 67.0,
+   "end": 75.25,
+   "seed": 9,
+   "els": [
+    {
+     "t": 67.0,
+     "html": "<div class=\"h1\" style=\"font-size:150px;white-space:nowrap\">Done in <em>seconds.</em></div>",
+     "anim": "pop",
+     "d": 0.45,
+     "style": "left:960px;top:520px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 68.6
+    },
+    {
+     "t": 68.8,
+     "html": "<div class=\"lab\">NOW</div>",
+     "anim": "fade",
+     "d": 0.5,
+     "style": "left:960px;top:300px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 73.6
+    },
+    {
+     "t": 68.9,
+     "html": "<div class=\"h1\" style=\"font-size:96px;text-align:center;white-space:nowrap\">this is where it gets</div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:440px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 73.6
+    },
+    {
+     "t": 72.2,
+     "html": "<div class=\"h1\" style=\"font-size:150px\"><span class=\"mark\"><i></i><em>interesting.</em></span></div>",
+     "anim": "pop",
+     "d": 0.45,
+     "style": "left:960px;top:610px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 73.6,
+     "mt": 72.5
+    },
+    {
+     "t": 73.8,
+     "html": "<div class=\"h1\" style=\"font-size:96px;white-space:nowrap\">Every value has a</div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:760px;top:460px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 74.4,
+     "html": "<div class=\"h1\" style=\"font-size:150px;color:#D97757\">receipt.</div>",
+     "anim": "pop",
+     "d": 0.4,
+     "style": "left:760px;top:620px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 74.4,
+     "html": "<div style=\"width:420px;background:#fff;border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.15);padding:30px;font:700 24px Inter;line-height:1.9;color:#6b655c\">Premium &nbsp;4,812.50<br>Source &nbsp;&quot;&#163;4,812.50 GBP&quot;<br><span style=\"color:#D97757\">Page 1</span><br><span style=\"letter-spacing:6px\">- - - - - - - - -</span></div>",
+     "anim": "drop",
+     "d": 0.5,
+     "style": "left:1500px;top:560px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "float": 8
+    }
+   ]
+  },
+  {
+   "id": "U04",
+   "type": "ui",
+   "start": 75.25,
+   "end": 82.5,
+   "clip": "C06_source",
+   "clip_in": 0,
+   "clip_out": 7.25,
+   "chips": [
+    [
+     "Exact line + page",
+     75.8
+    ]
+   ]
+  },
+  {
+   "id": "U04b",
+   "type": "ui",
+   "start": 82.5,
+   "end": 87.8,
+   "clip": "C06_source_closeup",
+   "clip_in": 7,
+   "clip_out": 20,
+   "chips": [
+    [
+     "No source? Don't trust it.",
+     82.6
+    ]
+   ]
+  },
+  {
+   "id": "U05",
+   "type": "ui",
+   "start": 87.8,
+   "end": 94.0,
+   "clip": "C07_human_check",
+   "clip_in": 0,
+   "clip_out": 6.2,
+   "chips": [
+    [
+     "Review screen",
+     88.2
+    ],
+    [
+     "Amber = check this",
+     92.2
+    ]
+   ]
+  },
+  {
+   "id": "U05b",
+   "type": "ui",
+   "start": 94.0,
+   "end": 102.9,
+   "clip": "C07_human_check_closeup",
+   "clip_in": 14,
+   "clip_out": 33.9,
+   "chips": [
+    [
+     "Fix it. Approve.",
+     98.8
+    ]
+   ]
+  },
+  {
+   "id": "M06_yes",
+   "type": "motion",
+   "start": 102.9,
+   "end": 110.5,
+   "seed": 13,
+   "els": [
+    {
+     "t": 103.0,
+     "html": "<div class=\"h1\" style=\"font-size:84px;text-align:center;white-space:nowrap\">Nothing is saved until a person says</div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:330px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 105.1
+    },
+    {
+     "t": 104.3,
+     "html": "<div class=\"h1\" style=\"font-size:220px;color:#fff;background:#D97757;border-radius:36px;padding:10px 60px\">YES</div>",
+     "anim": "stamp",
+     "d": 0.4,
+     "style": "left:960px;top:560px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 105.1
+    },
+    {
+     "t": 105.3,
+     "html": "<div class=\"card\" style=\"width:640px;text-align:center\"><div class=\"lab\">THE AI</div><div class=\"h1\" style=\"font-size:82px;margin-top:14px\">heavy lifting</div></div>",
+     "anim": "left",
+     "d": 0.5,
+     "style": "left:560px;top:540px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 107.2,
+     "html": "<div class=\"card\" style=\"width:640px;text-align:center;background:#1A1915;color:#F4F1EA\"><div class=\"lab\">YOUR TEAM</div><div class=\"h1\" style=\"font-size:82px;margin-top:14px\">in <em>control</em></div></div>",
+     "anim": "right",
+     "d": 0.5,
+     "style": "left:1360px;top:540px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    }
+   ]
+  },
+  {
+   "id": "U06",
+   "type": "ui",
+   "start": 110.5,
+   "end": 118.0,
+   "clip": "C08_duplicate_dashboard",
+   "clip_in": 1,
+   "clip_out": 21.5,
+   "chips": [
+    [
+     "Duplicate? Flagged red.",
+     111.0
+    ]
+   ]
+  },
+  {
+   "id": "U06b",
+   "type": "ui",
+   "start": 118.0,
+   "end": 126.1,
+   "clip": "C08_duplicate_dashboard",
+   "clip_in": 21.5,
+   "clip_out": 25,
+   "chips": [
+    [
+     "One clean dashboard",
+     118.3
+    ]
+   ]
+  },
+  {
+   "id": "M07_how",
+   "type": "motion",
+   "start": 126.1,
+   "end": 131.5,
+   "seed": 17,
+   "els": [
+    {
+     "t": 126.2,
+     "html": "<div class=\"lab\">A QUICK LOOK AT</div>",
+     "anim": "fade",
+     "d": 0.5,
+     "style": "left:960px;top:360px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 126.4,
+     "html": "<div class=\"h1\" style=\"font-size:150px;white-space:nowrap\">how I <em>work.</em></div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:500px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 129.6,
+     "html": "<div class=\"pill\" style=\"font-size:50px;background:#1A1915\">Built with Claude Code</div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:960px;top:720px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "float": 6
+    }
+   ]
+  },
+  {
+   "id": "U07",
+   "type": "ui",
+   "start": 131.5,
+   "end": 139.0,
+   "clip": "C09_prompts",
+   "clip_in": 0,
+   "clip_out": 9.8,
+   "chips": [
+    [
+     "Plan first",
+     133.6
+    ]
+   ]
+  },
+  {
+   "id": "U07b",
+   "type": "ui",
+   "start": 139.0,
+   "end": 144.3,
+   "clip": "C09_prompts",
+   "clip_in": 19.6,
+   "clip_out": 29.4,
+   "chips": [
+    [
+     "Build step by step. Test.",
+     139.2
+    ]
+   ]
+  },
+  {
+   "id": "M08_honest",
+   "type": "motion",
+   "start": 144.3,
+   "end": 167.3,
+   "seed": 19,
+   "els": [
+    {
+     "t": 144.4,
+     "html": "<div class=\"h1\" style=\"font-size:150px\">Reliable.</div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:400px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 149.4,
+     "mt": 146.7
+    },
+    {
+     "t": 146.9,
+     "html": "<div class=\"h1\" style=\"font-size:96px;white-space:nowrap\">In <em>a week</em>, not <span class=\"strike\"><b></b>months.</span></div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:600px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 149.4,
+     "mt": 148.2
+    },
+    {
+     "t": 149.7,
+     "html": "<div class=\"lab\">LET&#39;S BE HONEST</div>",
+     "anim": "fade",
+     "d": 0.5,
+     "style": "left:960px;top:110px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 151.3,
+     "html": "<div class=\"h1\" style=\"font-size:64px;white-space:nowrap\">It&#39;s not as easy as it sounds.</div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:210px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 154.2,
+     "html": "<div style=\"background:#FBEEE8;border-left:10px solid #D97757;border-radius:20px;padding:24px 34px;width:560px\" class=\"h1\"><span style=\"font-size:52px\">Blurry scans</span></div>",
+     "anim": "left",
+     "d": 0.5,
+     "style": "left:560px;top:420px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 157.0,
+     "html": "<div style=\"background:#FBEEE8;border-left:10px solid #D97757;border-radius:20px;padding:24px 34px;width:560px\" class=\"h1\"><span style=\"font-size:52px\">Different layouts</span></div>",
+     "anim": "left",
+     "d": 0.5,
+     "style": "left:560px;top:600px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 158.6,
+     "html": "<div style=\"background:#FBEEE8;border-left:10px solid #D97757;border-radius:20px;padding:24px 34px;width:560px\" class=\"h1\"><span style=\"font-size:52px\">Misread values</span></div>",
+     "anim": "left",
+     "d": 0.5,
+     "style": "left:560px;top:780px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 161.7,
+     "html": "<div class=\"lab\" style=\"color:#1A1915\">THE SAFEGUARDS</div>",
+     "anim": "fade",
+     "d": 0.5,
+     "style": "left:1390px;top:320px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 163.3,
+     "html": "<div style=\"background:#fff;border-left:10px solid #1A1915;border-radius:20px;padding:24px 34px;width:640px;box-shadow:0 10px 30px rgba(0,0,0,.08)\" class=\"h1\"><span style=\"font-size:52px\">Shows its sources</span></div>",
+     "anim": "right",
+     "d": 0.5,
+     "style": "left:1390px;top:420px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 164.0,
+     "html": "<div style=\"background:#fff;border-left:10px solid #1A1915;border-radius:20px;padding:24px 34px;width:640px;box-shadow:0 10px 30px rgba(0,0,0,.08)\" class=\"h1\"><span style=\"font-size:52px\">Flags anything doubtful</span></div>",
+     "anim": "right",
+     "d": 0.5,
+     "style": "left:1390px;top:600px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 166.6,
+     "html": "<div style=\"background:#fff;border-left:10px solid #1A1915;border-radius:20px;padding:24px 34px;width:640px;box-shadow:0 10px 30px rgba(0,0,0,.08)\" class=\"h1\"><span style=\"font-size:52px\">A person approves</span></div>",
+     "anim": "right",
+     "d": 0.5,
+     "style": "left:1390px;top:780px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    }
+   ]
+  },
+  {
+   "id": "M09_business",
+   "type": "motion",
+   "start": 167.3,
+   "end": 198.8,
+   "seed": 23,
+   "els": [
+    {
+     "t": 168.4,
+     "html": "<div class=\"lab\">FOR YOUR BUSINESS</div>",
+     "anim": "fade",
+     "d": 0.5,
+     "style": "left:960px;top:200px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 174.6
+    },
+    {
+     "t": 169.6,
+     "html": "<div style=\"display:flex;align-items:center;gap:26px\"><div style=\"width:74px;height:74px;border-radius:50%;background:#D97757;display:flex;align-items:center;justify-content:center\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"3.2\"><path d=\"M5 12l5 5 9-10\"/></svg></div><div class=\"h1\" style=\"font-size:76px\">Less typing</div></div>",
+     "anim": "left",
+     "d": 0.5,
+     "style": "left:960px;top:380px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 174.6
+    },
+    {
+     "t": 171.2,
+     "html": "<div style=\"display:flex;align-items:center;gap:26px\"><div style=\"width:74px;height:74px;border-radius:50%;background:#D97757;display:flex;align-items:center;justify-content:center\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"3.2\"><path d=\"M5 12l5 5 9-10\"/></svg></div><div class=\"h1\" style=\"font-size:76px\">Fewer mistakes</div></div>",
+     "anim": "left",
+     "d": 0.5,
+     "style": "left:960px;top:540px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 174.6
+    },
+    {
+     "t": 173.3,
+     "html": "<div style=\"display:flex;align-items:center;gap:26px\"><div style=\"width:74px;height:74px;border-radius:50%;background:#D97757;display:flex;align-items:center;justify-content:center\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"3.2\"><path d=\"M5 12l5 5 9-10\"/></svg></div><div class=\"h1\" style=\"font-size:76px\">Data you can trust</div></div>",
+     "anim": "left",
+     "d": 0.5,
+     "style": "left:960px;top:700px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 174.6
+    },
+    {
+     "t": 174.9,
+     "html": "<div class=\"h1\" style=\"font-size:110px;white-space:nowrap\">A version for <em>you</em></div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:200px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 184.2
+    },
+    {
+     "t": 176.4,
+     "html": "<div class=\"card\" style=\"width:400px;height:220px;display:flex;align-items:center;justify-content:center;text-align:center\"><div class=\"h1\" style=\"font-size:50px\">Your documents and fields</div></div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:520px;top:520px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 184.2,
+     "float": 6
+    },
+    {
+     "t": 178.4,
+     "html": "<div class=\"card\" style=\"width:400px;height:220px;display:flex;align-items:center;justify-content:center;text-align:center\"><div class=\"h1\" style=\"font-size:50px\">Logins</div></div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:1400px;top:520px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 184.2,
+     "float": 6,
+     "ph": 1
+    },
+    {
+     "t": 180.0,
+     "html": "<div class=\"card\" style=\"width:400px;height:220px;display:flex;align-items:center;justify-content:center;text-align:center\"><div class=\"h1\" style=\"font-size:50px\">Every change recorded</div></div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:520px;top:800px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 184.2,
+     "float": 6,
+     "ph": 2
+    },
+    {
+     "t": 181.5,
+     "html": "<div class=\"card\" style=\"width:400px;height:220px;display:flex;align-items:center;justify-content:center;text-align:center\"><div class=\"h1\" style=\"font-size:50px\">Your CRM or Google Sheets</div></div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:1400px;top:800px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 184.2,
+     "float": 6,
+     "ph": 3
+    },
+    {
+     "t": 184.5,
+     "html": "<div class=\"lab\">RUNNING COST</div>",
+     "anim": "fade",
+     "d": 0.5,
+     "style": "left:960px;top:200px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 186.7,
+     "html": "<div class=\"h1\" style=\"font-size:150px;white-space:nowrap\">a few <em>cents</em></div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:960px;top:380px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 187.4,
+     "html": "<div class=\"h1\" style=\"font-size:64px;color:#6b655c\">per document</div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:510px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 189.5,
+     "html": "<div class=\"card\" style=\"font-size:60px;white-space:nowrap\" ><span class=\"h1\">Hosting: free to about <em>$7</em> a month</span></div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:700px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 196.6,
+     "html": "<div class=\"h1\" style=\"font-size:60px;color:#D97757;border:8px solid #D97757;border-radius:18px;padding:8px 30px;letter-spacing:.1em\">ESTIMATE</div>",
+     "anim": "stamp",
+     "d": 0.5,
+     "style": "left:1560px;top:360px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "rot": -12
+    }
+   ]
+  },
+  {
+   "id": "M10_close",
+   "type": "motion",
+   "start": 198.8,
+   "end": 228.25,
+   "seed": 29,
+   "els": [
+    {
+     "t": 199.0,
+     "html": "<div class=\"h1\" style=\"font-size:104px;text-align:center;line-height:1.05\">Still copying data<br>by <span class=\"mark\"><i></i><em>hand?</em></span></div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:400px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 206.0,
+     "mt": 202.9
+    },
+    {
+     "t": 204.2,
+     "html": "<div class=\"pill\" style=\"font-size:56px\">I&#39;d love to build your version.</div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:960px;top:680px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 206.0
+    },
+    {
+     "t": 206.2,
+     "html": "<div class=\"h1\" style=\"font-size:150px\">And that&#39;s it.</div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:960px;top:540px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "out": 207.6
+    },
+    {
+     "t": 207.8,
+     "html": "<div style=\"width:240px;height:240px;border-radius:50%;background:#D97757;color:#fff;display:flex;align-items:center;justify-content:center\" class=\"h1\"><span style=\"font-size:120px\">JO</span></div>",
+     "anim": "pop",
+     "d": 0.6,
+     "style": "left:960px;top:300px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "float": 8
+    },
+    {
+     "t": 208.2,
+     "html": "<div class=\"h1\" style=\"font-size:84px;white-space:nowrap\">Joel Osumah-Suleiman</div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:510px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 208.6,
+     "html": "<div class=\"h1\" style=\"font-size:64px;white-space:nowrap\">AI that <em>does the work.</em></div>",
+     "anim": "up",
+     "d": 0.5,
+     "style": "left:960px;top:610px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)"
+    },
+    {
+     "t": 209.4,
+     "html": "<div class=\"pill\" style=\"font-size:44px\">New build every Tuesday</div>",
+     "anim": "pop",
+     "d": 0.5,
+     "style": "left:960px;top:760px;",
+     "cls": "",
+     "base": "translate(-50%,-50%)",
+     "float": 5
+    }
+   ]
+  }
+ ],
+ "key_lines": [
+  [
+   68.6,
+   75.2
+  ],
+  [
+   82.4,
+   87.7
+  ],
+  [
+   102.8,
+   110.4
+  ],
+  [
+   146.6,
+   149.5
+  ],
+  [
+   161.6,
+   167.3
+  ],
+  [
+   198.7,
+   206.1
+  ]
+ ],
+ "clicks": [
+  51.5,
+  102.0,
+  119.2
+ ],
+ "captions_end": 207.3
+}
